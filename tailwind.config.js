@@ -16,6 +16,7 @@ module.exports = {
   variants: {
     extend: {
       padding: ['hover', 'group-hover', 'last'],
+      fontStyle: ['hover'],
     },
   },
   plugins: [],

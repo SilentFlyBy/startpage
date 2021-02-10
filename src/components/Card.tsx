@@ -17,7 +17,7 @@ export const Card = ({ headline, links, color, className }: Props) => (
   <div
     className={`m-2 rounded bg-gray-200 shadow overflow-hidden ${className}`}
   >
-    <div className="py-4 rounded-t" style={{ backgroundColor: color }}>
+    <div className="py-4" style={{ backgroundColor: color }}>
       <h2 className="m-0 text-center text-white text-2xl font-bold">
         {headline}
       </h2>

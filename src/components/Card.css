@@ -28,7 +28,7 @@ ul.card-links li:last-child a {
   margin-bottom: 1rem;
 }
 ul.card-links li:last-child a:hover {
-  margin-bottom: 0rem;
+  margin-bottom: 0;
 }
 ul.card-links a:hover {
   font-style: italic;
@@ -39,8 +39,8 @@ ul.card-links a:hover {
   color: #fff !important;
   background-color: #5b5b5b;
 }
-ul.card-links li:hover ~ li a {
-  margin-bottom: 0rem !important;
+ul.card-links li:hover ~ li:last-child a {
+  margin-bottom: 0 !important;
 }
 ul.card-links a:visited {
   color: #2d5b9f;

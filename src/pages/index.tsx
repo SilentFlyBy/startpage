@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 
 import { Card, LinkDescription } from '../components/Card';
+import { Clock } from '../components/Clock';
 import { SearchBox } from '../components/SearchBox';
-import Snowfall from 'react-snowfall';
+import { Snow } from '../components/Show';
 
 interface Config {
   sections: {
@@ -36,15 +37,19 @@ const IndexPage = () => {
   const gridColumnTemplate = `grid-cols-${config?.sections.length}`;
   return (
     <div className="w-full h-full bg-gray-700 overflow-auto">
-      <Snowfall />
+      <Snow />
       <div
         className={`my-0 mx-auto mt-8 font-sans grid grid-flow-col ${gridColumnTemplate}`}
         style={{ maxWidth: '1024px' }}
       >
-        <SearchBox className="col-start-2 col-end-4" />
+        <Clock className="col-start-2 col-end-4 mx-auto my-12" />
+        <SearchBox
+          className="col-start-2 col-end-4 my-2 row-start-2"
+          style={{ width: 'calc(100% - (2* 0.3rem) - 6px)' }}
+        />
 
         {config?.sections.map(section => (
-          <Card key={section.headline} {...section} className="row-start-2" />
+          <Card key={section.headline} {...section} className="row-start-3" />
         ))}
 
         <div className="row-start-3"></div>
