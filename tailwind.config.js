@@ -3,7 +3,7 @@ module.exports = {
     enabled: true,
     content: ['./src/**/*.{js,jsx,ts,tsx}'],
     options: {
-      safelist: [/^grid-cols-/],
+      safelist: [/^grid-cols-/, /^row-start-/],
     },
   },
   darkMode: false, // or 'media' or 'class'

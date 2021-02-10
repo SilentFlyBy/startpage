@@ -4,6 +4,7 @@ import { Card, LinkDescription } from '../components/Card';
 import { Clock } from '../components/Clock';
 import { SearchBox } from '../components/SearchBox';
 import { Snow } from '../components/Show';
+import { Weather } from '../components/Weather';
 
 interface Config {
   sections: {
@@ -45,13 +46,14 @@ const IndexPage = () => {
         }}
       >
         <Clock className="col-start-2 col-end-4 mx-auto my-12" />
+        <Weather className="row-start-2 col-start-2 col-end-4" />
         <SearchBox
-          className="col-start-2 col-end-4 my-2 row-start-2"
+          className="col-start-2 col-end-4 my-2 row-start-3"
           style={{ width: 'calc(100% - (2* 0.3rem) - 6px)' }}
         />
 
         {config?.sections.map(section => (
-          <Card key={section.headline} {...section} className="row-start-3" />
+          <Card key={section.headline} {...section} className="row-start-4" />
         ))}
       </div>
     </div>
