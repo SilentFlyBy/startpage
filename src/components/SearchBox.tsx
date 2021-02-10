@@ -50,7 +50,7 @@ export const SearchBox = ({ className, style }: Props) => {
           <input
             type="text"
             placeholder="Suche"
-            className="block w-full"
+            className="block w-full focus:outline-none"
           ></input>
         </form>
       </div>
