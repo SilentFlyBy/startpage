@@ -39,8 +39,10 @@ const IndexPage = () => {
     <div className="w-full h-full bg-gray-700 overflow-auto">
       <Snow />
       <div
-        className={`my-0 mx-auto mt-8 font-sans grid grid-flow-col ${gridColumnTemplate}`}
-        style={{ maxWidth: '1024px' }}
+        className={`my-0 mx-auto mt-8 font-sans grid ${gridColumnTemplate}`}
+        style={{
+          maxWidth: '1024px',
+        }}
       >
         <Clock className="col-start-2 col-end-4 mx-auto my-12" />
         <SearchBox
@@ -51,8 +53,6 @@ const IndexPage = () => {
         {config?.sections.map(section => (
           <Card key={section.headline} {...section} className="row-start-3" />
         ))}
-
-        <div className="row-start-3"></div>
       </div>
     </div>
   );
