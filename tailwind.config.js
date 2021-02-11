@@ -1,5 +1,11 @@
 module.exports = {
-  purge: ['./src/**/*.{js,jsx,ts,tsx}'],
+  purge: {
+    enabled: true,
+    content: ['./src/**/*.{js,jsx,ts,tsx}'],
+    options: {
+      safelist: [/^grid-cols-/, /^row-start-/],
+    },
+  },
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
@@ -16,6 +22,7 @@ module.exports = {
   variants: {
     extend: {
       padding: ['hover', 'group-hover', 'last'],
+      fontStyle: ['hover'],
     },
   },
   plugins: [],
