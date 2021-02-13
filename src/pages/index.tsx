@@ -46,7 +46,7 @@ const IndexPage = () => {
         }}
       >
         <Clock className="col-start-2 col-end-4 mx-auto my-12" />
-        <Weather className="row-start-2 col-start-2 col-end-4" />
+        {/*<Weather className="row-start-2 col-start-2 col-end-4" />*/}
         <SearchBox
           className="col-start-2 col-end-4 my-2 row-start-3"
           style={{ width: 'calc(100% - (2* 0.3rem) - 6px)' }}
