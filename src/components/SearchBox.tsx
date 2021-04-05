@@ -14,7 +14,7 @@ interface SearchEngine {
 }
 
 const searchEngines: SearchEngine[] = [
-  { name: 'Google', action: 'http://www.google.com/search', query: 'q' },
+  { name: 'Google', action: 'https://www.google.com/search', query: 'q' },
   { name: 'DuckDuckGo', action: 'https://duckduckgo.com/', query: 'q' },
   {
     name: 'Startpage',

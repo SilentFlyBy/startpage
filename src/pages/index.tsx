@@ -15,6 +15,7 @@ interface Config {
 }
 
 const gistId = '717926d7537f54f2176e00733c6f7195';
+const CONFIG_KEY = 'CONFIG';
 
 const IndexPage = () => {
   const [config, setConfig] = useState<Config>();
@@ -28,10 +29,17 @@ const IndexPage = () => {
     const configUrl = await discoverConfigFile();
     const configResponse = await fetch(configUrl);
     const json = await configResponse.json();
+    localStorage.setItem(CONFIG_KEY, json);
     setConfig(json);
   };
 
   useEffect(() => {
+    const json = localStorage.getItem(CONFIG_KEY);
+    try {
+      const config = json ? (JSON.parse(json) as Config) : null;
+      config && setConfig(config);
+    } catch {}
+
     fetchData();
   }, []);
 
