@@ -59,7 +59,6 @@ const IndexPage = () => {
           className="col-start-2 col-end-4 my-2 row-start-3"
           style={{ width: 'calc(100% - (2* 0.3rem) - 6px)' }}
         />
-
         {config?.sections.map(section => (
           <Card key={section.headline} {...section} className="row-start-4" />
         ))}

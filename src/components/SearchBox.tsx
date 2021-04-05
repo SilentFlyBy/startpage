@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useHasMounted } from '../hooks/useHasMounted';
 import { usePersistentState } from '../hooks/usePersistentState';
 import { DropdownArrow } from '../images/icons';
 
@@ -72,6 +73,11 @@ export const SearchBox = ({ className, style }: Props) => {
     searchEngines[0],
     'searchEngine',
   );
+  const hasMounted = useHasMounted();
+  if (!hasMounted) {
+    return null;
+  }
+
   return (
     <div className={`flex mx-auto ${className}`} style={style}>
       <SearchEngineDropdown
