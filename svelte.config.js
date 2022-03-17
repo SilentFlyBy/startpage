@@ -13,6 +13,9 @@ const config = {
 			default: true
 		},
 		adapter: adapter(),
+		paths: {
+			base: '/startpage/'
+		},
 		vite: {
 			resolve: {
 				alias: {
