@@ -14,8 +14,7 @@ const config = {
 		},
 		adapter: adapter(),
 		paths: {
-			base: '/startpage',
-			assets: '/startpage'
+			base: '/startpage'
 		},
 		vite: {
 			resolve: {
