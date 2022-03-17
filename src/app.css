@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	margin: 0px;
+}
+
+div[role='group'][tabindex] {
+	height: 100%;
+}
+
+#snow-container {
+	width: 100vw;
+	max-width: 100vw;
+	height: 100vh;
+	position: fixed;
+}
