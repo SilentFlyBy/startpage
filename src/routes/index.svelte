@@ -46,10 +46,10 @@
 </script>
 
 <div class="w-full h-full bg-gray-700 overflow-auto">
-	<div class={`my-0 mx-auto mt-8 font-sans grid ${gridColumnTemplate}`} style="max-width: 1024px;">
+	<div class={`my-0 mx-auto mt-8 font-sans grid ${gridColumnTemplate}`} style="max-width: 1500px;">
 		<Clock class="col-start-2 col-end-4 mx-auto my-12" />
 		<SearchBox
-			class="col-start-2 col-end-4 my-2 row-start-3"
+			class="col-start-2 col-end-5 my-2 row-start-3"
 			style="width: calc(100% - (2* 0.3rem) - 6px)"
 		/>
 		{#if $config}
